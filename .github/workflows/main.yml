@@ -14,4 +14,4 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az storage blob upload-batch --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} --destination ${{ secrets.AZURE_STORAGE_CONTAINER }} --source .
+           az storage blob upload-batch --destination-path '$web' --source . --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT }} --account-key ${{ secrets.AZURE_STORAGE_KEY }}
